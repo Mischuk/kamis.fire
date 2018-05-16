@@ -1,0 +1,120 @@
+.m_footer
+  padding 15px 0
+  text-align center
+  background #f1f1f1
+  @media SM
+    margin-top 25px
+    padding-bottom 40px
+  @media LG
+    margin-top 60px
+    padding-top 60px
+    padding-bottom 60px
+  .social-buttons
+    text-align left
+    padding-left 30px
+    padding-top 15px
+    @media LG
+      width 15%
+      float right
+      padding-top 0
+      padding-left 0
+      text-align right
+  .menu
+    text-align left
+    @media LG
+      width 85%
+      float left
+    .column
+      border-bottom 1px solid #dfdfdf
+      @media SM
+        border-bottom none
+        float left
+        width 50%
+        padding-top 40px
+        &:nth-child(2n+1)
+          clear left
+      @media LG
+        width 25%
+        padding-right 15px
+        padding-top 0
+        &:nth-child(2n+1)
+          clear none
+      &:last-child
+        border-bottom none
+        ul
+          @media screen and (max-width: 767px)
+            padding-bottom 10px
+    .collapse-list
+      cursor pointer
+      padding 15px 0
+      position relative
+      sn()
+      @media SM
+        display none
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -150px -100px;
+        width: 16px;
+        height: 10px;
+        position absolute
+        right 30px
+        top 50%
+        margin-top -(@height/2)
+        retina()
+      &.is-open
+        &:after
+          transform rotate(180deg)
+      &:hover
+        &:after
+          background-position -200px -100px
+        span
+          color $green
+      span
+        bebas()
+        font-size 30px
+        line-height 1
+        display inline-block
+        vertical-align middle
+        padding-left 30px
+        padding-right 30px
+    ul
+      display none
+      padding-left 30px
+      padding-bottom 25px
+      @media SM
+        display block !important
+      @media LG
+        padding-bottom 0
+        padding-left 0
+      li
+        @media SM
+          display inline-block
+          vertical-align top
+          width 49%
+          padding-right 15px
+        @media LG
+          width 100%
+          padding-right 0
+        &.lead-item
+          display none
+          @media SM
+            display block
+            padding-bottom 10px
+          a
+            bebas()
+            font-size 24px
+            @media MD
+              font-size 30px
+        a
+          ubuntu()
+          font-size 18px
+          line-height 1
+          color #000
+          display inline-block
+          vertical-align middle
+          padding 8px 0
+          @media SM
+            padding 5px 0
+            font-size 15px
+          &:hover
+            color $green

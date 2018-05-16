@@ -1,0 +1,133 @@
+extends _layout
+
+block settings
+  - var title = 'Рецепт';
+  - var header_fixed = true;
+
+block content
+  .m_lead-section
+    .back-image(style="background-image: url('images/content/back-image-article.png')")
+    .front
+      .center
+        .title Шашлык из курицы с пряностями и дымком
+  .content
+    .m_recipe-info
+      .column
+        .time
+          .title Время приготовления
+          .value 1 час 20 минут
+        .count
+          .title Количество порций
+          .value 4
+      .column
+        .similar-carousel-title Продукты Kamis, которые делают это блюдо неповторимым:
+        .similar-carousel
+          .item
+            .image
+              a(href="#")
+                img(src="images/content/product-1.jpg", alt="")
+            .title: a(href="#") Копченный тахасец
+          .item
+            .image
+              a(href="#")
+                img(src="images/content/product-2.png", alt="")
+            .title: a(href="#") Морская соль
+          .item
+            .image
+              a(href="#")
+                img(src="images/content/product-3.png", alt="")
+            .title: a(href="#") Хрустящая панировка
+          .item
+            .image
+              a(href="#")
+                img(src="images/content/product-4.png", alt="")
+            .title: a(href="#") Золотистая рыба
+    .m_product-description
+      .column
+        .title Ингредиенты
+        .body
+          ul
+            li 1 пакетик Kamis Копченый Техасец
+            li 600 г. филе курицы или индейки
+            li 1 стакан минеральной газированной воды
+            li 4 ст.л. 9%-ого уксуса
+            li 1 шт. репчатого крупного лука
+            li 4 ст.л. растительного масла
+      .column
+        .title Способ приготовления
+        .body
+          ol
+            li
+              h3 Шаг 1
+              p 600 г филе курицы или индейки нарезать крупными кубиками. 1 луковицу очистить, нарезать шашками, смешать с содержимым пакета «Копченый Техасец», стаканом минеральной воды и 4 ст.л. столового 9%-ого уксуса.
+            li
+              h3 Шаг 2
+              p Замариновать мясо получившимся маринадом и убрать в прохладное место на 2 часа, а лучше на ночь.
+            li
+              h3 Шаг 3
+              p Извлечь мясо из маринада, слегка обсушить, перемешать с 6 ст.л. растительного масла и посолить. Жарить на мангале или сковороде 8 - 12 минут. Подавать вместе с овощами гриль или рисом с травами.
+    .share-post
+      h2 Понравился рецепт?&nbsp;<br>Расскажите о нем друзьям!
+      .like-counter
+        button 2356
+      .social-buttons
+        a(class="vk" href="#")
+        a(class="fb" href="#")
+        a(class="ok" href="#")
+  .m_items
+    .wrapper
+      .section-title.center
+        h2 Другие рецепты
+      -
+        var article_items = [
+          {
+            image: 'images/content/lh-1.png',
+            title: 'Как сделать свинину нежной',
+            like_counter: '12'
+          },
+          {
+            image: 'images/content/lh-2.png',
+            title: 'Люля-кебаб разваливается. Что делать?',
+            like_counter: '23'
+          },
+          {
+            image: 'images/content/lh-3.png',
+            title: 'Раскочегариваем угли на максимум',
+            like_counter: '34'
+          },
+          {
+            image: 'images/content/lh-4.png',
+            title: 'Как выбирать мясо',
+            like_counter: '56'
+          },
+          {
+            image: 'images/content/lh-1.png',
+            title: 'Как сделать свинину нежной',
+            like_counter: '12'
+          },
+          {
+            image: 'images/content/lh-2.png',
+            title: 'Люля-кебаб разваливается. Что делать?',
+            like_counter: '23'
+          },
+          {
+            image: 'images/content/lh-3.png',
+            title: 'Раскочегариваем угли на максимум',
+            like_counter: '34'
+          },
+          {
+            image: 'images/content/lh-4.png',
+            title: 'Как выбирать мясо',
+            like_counter: '56'
+          }
+        ]
+      .columns
+        each item in article_items
+          .item
+            .image(style="background-image: url("+item.image+")"): a(href="#")
+            .bottom
+              .title: a(href="#") #{item.title}
+              .like-counter
+                button #{item.like_counter}
+      .details
+        a(class="btn" href="#") Смотреть еще

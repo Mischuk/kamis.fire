@@ -1,0 +1,50 @@
+.m_products-list
+  position relative
+  padding-top 30px
+  @media LG
+    padding-top 50px
+  .list-item
+    margin-bottom 30px
+    @media LG
+      margin-bottom 50px
+    &:last-child
+      margin-bottom 0
+  .product-header
+    background #f1f1f1
+    padding 15px
+    text-align center
+    @media screen and (min-width: 460px)
+      display table
+      width 100%
+    @media SM
+      padding 30px
+    .image,
+    .text
+      @media screen and (min-width: 460px)
+        display table-cell
+        vertical-align middle
+    .image
+      @media screen and (min-width: 460px)
+        max-width 100px
+      @media SM
+        width 250px
+      img
+        display inline-block
+        vertical-align middle
+        max-width 100%
+    .text
+      margin-top 15px
+      @media screen and (min-width: 460px)
+        text-align left
+        padding-left 15px
+      @media MD
+        padding-left 30px
+      .category
+        font-size 14px
+        ubuntu()
+        @media SM
+          font-size 18px
+      .title
+        font-size 32px
+        @media SM
+          font-size 50px

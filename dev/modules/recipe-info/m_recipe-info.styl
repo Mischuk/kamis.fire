@@ -1,0 +1,151 @@
+.m_recipe-info
+  position relative
+  padding-top 15px
+  @media MD
+    display table
+    width 100%
+    table-layout fixed
+    padding-top 30px
+  .column
+    @media MD
+      display table-cell
+      vertical-align top
+      &:first-child
+        width 275px
+  .column + .column
+    margin-top 15px
+    @media MD
+      margin-top 0
+      padding-left 50px
+  .filter
+    font-size 18px
+    @media XS
+      font-size 24px
+    li
+      text-decoration underline
+      display inline-block
+      vertical-align middle
+      margin-right 10px
+      @media MD
+        display block
+        padding-left 15px
+  .time, .count
+    background #f1f1f1
+    padding 15px
+    font-size 21px
+    @media screen and (min-width: 440px)
+      width 48%
+      display inline-block
+      vertical-align top
+    @media XS
+      font-size 24px
+    @media SM
+      font-size 30px
+    @media MD
+      display block
+      width 100%
+      margin-top 30px
+    .title
+      margin-bottom 5px
+    .value
+      position relative
+      padding-left 45px
+      line-height 35px
+      display inline-block
+      vertical-align middle
+  .time
+    margin-top 0
+    .value
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat 0 -200px;
+        width: 32px;
+        height: 35px;
+        position absolute
+        left 0
+        top 50%
+        margin-top -(@height/2)
+  .count
+    margin-top 15px
+    @media screen and (min-width: 440px)
+      margin-left 4%
+      margin-top 0
+    @media MD
+      margin-left 0
+      margin-top 30px
+    .value
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -50px -200px;
+        width: 32px;
+        height: 32px;
+        position absolute
+        left 0
+        top 50%
+        margin-top -(@height/2)
+  .similar-carousel-title
+    font-size 24px
+    padding-top 15px
+    padding-bottom 15px
+    text-align center
+    @media SM
+      padding-top 30px
+      padding-bottom 30px
+      font-size 30px
+    @media MD
+      padding-top 0
+  .similar-carousel
+    @media SM
+      margin-bottom 30px
+    .slick-arrow
+      position absolute
+      top 50%
+      width: 19px;
+      height: 31px;
+      margin-top -(@height/2)
+      text-indent -9999px
+      border none
+      background-color transparent
+      z-index 1
+      &.slick-prev
+        background: url('../images/sprite.png') no-repeat -100px -50px;
+        left 0
+        &:hover
+         background-position -300px 0
+      &.slick-next
+        background: url('../images/sprite.png') no-repeat -150px -50px;
+        right 0
+        &:hover
+          background-position -250px 0
+    .item
+      text-align center
+      .image
+        width 285px
+        height 285px
+        margin-left auto
+        margin-right auto
+        a
+          anim(background-color)
+          display block
+          height 100%
+          width 100%
+          background #f1f1f1
+          line-height 285px
+          text-align center
+          border-radius 50%
+          &:hover
+            background-color #e6e6e6
+          img
+            display inline-block
+            vertical-align middle
+            max-width 100%
+            max-height 100%
+      .title
+        margin-top 15px
+        a
+          anim(color)
+          color #000
+          font-size 27px
+          &:hover
+            color $orange
+

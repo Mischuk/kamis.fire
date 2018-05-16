@@ -1,0 +1,70 @@
+.m_lead-news
+  position relative
+  .details
+    margin-top 30px
+    text-align center
+    @media SM
+      margin-top 60px
+  .list
+    clearfix()
+    text-align center
+    .item
+      @media screen and (min-width: 640px)
+        float left
+        width 50%
+      @media MD
+        width 33.333%
+      & + .item
+        margin-top 30px
+        @media screen and (min-width: 640px)
+          margin-top 0
+      &:last-child
+        display none
+        @media MD
+          display block
+      .image
+        width 285px
+        height 285px
+        margin-left auto
+        margin-right auto
+        a
+          anim(background-color)
+          display block
+          height 100%
+          width 100%
+          background #f1f1f1
+          line-height 285px
+          text-align center
+          border-radius 50%
+          &:hover
+            background-color #e6e6e6
+          img
+            display inline-block
+            vertical-align middle
+            max-width 100%
+            max-height 100%
+      .title
+        margin-top 15px
+        a
+          anim(color)
+          color #000
+          font-size 27px
+          &:hover
+            color $orange
+
+.m_lead-news + .m_lead-news
+  border-top 1px solid #f1f1f1
+  margin-top 45px
+  .item
+    @media screen and (min-width: 640px)
+      margin-bottom 30px
+    @media screen and (min-width: 640px) and (max-width: 991px)
+      &:nth-child(2n+1)
+        clear left
+    @media screen and (min-width: 992px)
+      &:nth-child(3n+1)
+        clear left
+    .title
+      @media MD
+        padding-left 30px
+        padding-right 30px

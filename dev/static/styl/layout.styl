@@ -1,0 +1,48 @@
+wrapper()
+  max-width 1230px
+  width 100%
+  margin-left auto
+  margin-right auto
+  padding 0 15px
+  @media SM
+    padding 0 25px
+.container
+  height 100%
+  wrapper()
+.wrapper
+  clearfix()
+  wrapper()
+.content
+  wrapper()
+  padding-top 40px
+  margin-bottom 30px
+  @media SM
+    padding-top 30px
+    margin-bottom 45px
+  @media LG
+    padding-top 45px
+    margin-bottom 60px
+  article
+    max-width 800px
+    margin-left auto
+    margin-right auto
+  .m_users
+    padding-top 0
+main
+  display block
+  max-width $wrapper
+  width 100%
+  padding 0 15px
+  margin 0 auto
+  position relative
+
+html.flexbox
+  body
+    display flex
+    min-height 100vh
+    flex-direction column
+  .container
+    flex 1
+
+
+

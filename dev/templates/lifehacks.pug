@@ -1,0 +1,65 @@
+extends _layout
+
+block settings
+  - var title = 'Лайфхаки';
+  - var header_fixed = false;
+
+block content
+  .content
+    .m_items
+      .wrapper
+        .section-title.center
+          h2 Лайфхаки
+        -
+          var article_items = [
+            {
+              image: 'images/content/lh-1.png',
+              title: 'Как сделать свинину нежной',
+              like_counter: '12'
+            },
+            {
+              image: 'images/content/lh-2.png',
+              title: 'Люля-кебаб разваливается. Что делать?',
+              like_counter: '23'
+            },
+            {
+              image: 'images/content/lh-3.png',
+              title: 'Раскочегариваем угли на максимум',
+              like_counter: '34'
+            },
+            {
+              image: 'images/content/lh-4.png',
+              title: 'Как выбирать мясо',
+              like_counter: '56'
+            },
+            {
+              image: 'images/content/lh-1.png',
+              title: 'Как сделать свинину нежной',
+              like_counter: '12'
+            },
+            {
+              image: 'images/content/lh-2.png',
+              title: 'Люля-кебаб разваливается. Что делать?',
+              like_counter: '23'
+            },
+            {
+              image: 'images/content/lh-3.png',
+              title: 'Раскочегариваем угли на максимум',
+              like_counter: '34'
+            },
+            {
+              image: 'images/content/lh-4.png',
+              title: 'Как выбирать мясо',
+              like_counter: '56'
+            }
+          ]
+        .columns
+          each item in article_items
+            .item
+              .image(style="background-image: url("+item.image+")"): a(href="#")
+              .bottom
+                .title: a(href="#") #{item.title}
+                .like-counter
+                  button #{item.like_counter}
+        .details
+          a(class="btn" href="#") Смотреть еще

@@ -1,0 +1,28 @@
+.graph-bg
+  position relative
+  background #f1f1f1
+  padding-bottom 20px
+  margin-bottom 50px
+  padding-top 20px
+  margin-top 50px
+  @media SM
+    padding-top 30px
+    padding-bottom 30px
+    margin-bottom 70px
+    margin-top 70px
+  &:before
+    content ''
+    background url("../images/graph-bg-top.png") no-repeat bottom center
+    position absolute
+    height 90px
+    width 100%
+    left 0
+    top -34px
+  &:after
+    content ''
+    background url("../images/graph-bg-bottom.png") no-repeat bottom center
+    position absolute
+    height 84px
+    width 100%
+    left 0
+    bottom -32px

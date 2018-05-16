@@ -1,0 +1,65 @@
+.m_feedback-form
+  position relative
+  background #f1f1f1
+  padding 15px
+  text-align center
+  @media XS
+    padding 30px
+  @media MD
+    padding 50px
+  .form-title
+    margin-bottom 15px
+    @media SM
+      margin-bottom 45px
+    h2
+      font-size 50px
+      @media SM
+        margin-bottom 15px
+    p
+      margin-bottom 0
+      ubuntu()
+  form
+    input,
+    textarea
+      bebas()
+      border 1px solid #fff
+      width 100%
+      padding 15px 30px
+      border-radius 30px
+      anim(background-color, color, border-color)
+      &:hover
+        color #949494
+        background-color #d9d9d9
+        border-color @background-color
+      &:focus
+        border-color #f1f1f1
+        background #fff
+        color #000
+      @media SM
+        font-size 24px
+        padding 10px 30px
+    textarea
+      min-height 150px
+      border-radius 15px
+    button.btn
+      bebas()
+      margin-top 15px
+      display inline-block
+      vertical-align middle
+      border none
+      @media SM
+        margin-top 4%
+    .form-row
+      @media SM
+        max-width 768px
+        margin-left auto
+        margin-right auto
+    .form-column
+      margin-bottom 15px
+      @media SM
+        float left
+        width 48%
+        &:last-child
+          margin-left 4%
+          margin-bottom 4%
+

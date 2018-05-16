@@ -1,0 +1,55 @@
+.m_product-description
+  position relative
+  padding-top 30px
+  @media MD
+    display table
+    width 100%
+  .column
+    @media MD
+      display table-cell
+      vertical-align top
+      background #f1f1f1
+      &:first-child
+        width 440px
+  .column + .column
+    margin-top 30px
+    @media MD
+      border-left 30px solid #fff
+  .title
+    font-size 30px
+    line-height 1
+    margin-bottom 15px
+    padding-left 15px
+    @media XS
+      font-size 40px
+      padding-left 30px
+    @media SM
+      font-size 50px
+    @media MD
+      background #fff
+      padding-bottom 15px
+      padding-top 15px
+    @media LG
+      padding-left 45px
+  .body
+    ubuntu()
+    font-size 15px
+    line-height 24px
+    background #f1f1f1
+    padding 15px
+    @media XS
+      padding 30px
+    @media LG
+      padding 30px 45px
+    ul
+      bebas()
+      font-size 18px
+      @media XS
+        font-size 24px
+      li
+        padding 5px 0
+        @media LG
+          padding 8px 0
+    ol
+      h3
+        bebas()

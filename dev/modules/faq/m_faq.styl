@@ -1,0 +1,51 @@
+.m_faq
+  position relative
+  margin-bottom 45px
+  max-width 960px
+  margin-left auto
+  margin-right auto
+  .section-title
+    padding-top 0
+    text-align center
+    @media SM
+      padding-top 15px
+  .item
+    ubuntu()
+    border-bottom 1px solid #f0f0f0
+    line-height 1
+    &.is-open
+      .headling
+        color #91ad05
+        &:after
+          background-position -200px -100px
+          transform rotate(180deg)
+    .headling
+      anim(color)
+      sn()
+      font-size 18px
+      font-weight 500
+      position relative
+      padding 15px 0
+      padding-right 30px
+      @media SM
+        padding 25px 0
+        padding-right 30px
+      @media XS
+        font-size 21px
+      &:after
+        anim(transform)
+        content ''
+        background: url('../images/sprite.png') no-repeat -150px -100px;
+        width: 16px;
+        height: 10px;
+        position absolute
+        right 0
+        top 50%
+        margin-top -(@height/2)
+    .body
+      font-size 15px
+      line-height 24px
+      display none
+      margin-bottom 15px
+      @media SM
+        margin-bottom 25px

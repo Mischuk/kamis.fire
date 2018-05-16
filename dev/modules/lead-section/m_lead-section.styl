@@ -1,0 +1,130 @@
+.m_lead-section
+  position relative
+  height auto
+  color #fff
+  text-shadow 1px 1px 0 rgba(0,0,0,.75)
+  text-align center
+  padding 45px 15px
+  padding-top 60px
+  @media SM
+    padding-top 150px
+    padding-bottom 70px
+  @media LG
+    // padding-top 250px
+    // padding-bottom 200px
+    padding-bottom 120px
+  .back-image
+    position absolute
+    left 0
+    top 0
+    width 100%
+    height 100%
+    background-repeat no-repeat
+    background-position center bottom
+    background-size cover
+  .front
+    position relative
+    z-index 1
+    display table
+    width 100%
+    height 100%
+    max-width 1100px
+    margin-left auto
+    margin-right auto
+  .title
+    bebas()
+    font-size 32px
+    line-height 1
+    margin-bottom 10px
+    margin-top 10px
+    @media SM
+      font-size 48px
+      margin-top 0
+      margin-bottom 20px
+    @media LG
+      font-size 72px
+  .text
+    ubuntu()
+    font-size 14px
+    line-height 1.2
+    max-width 720px
+    margin-left auto
+    margin-right auto
+    @media SM
+      font-size 16px
+    @media LG
+      font-size 18px
+  .steps
+    clearfix()
+    text-align center
+  .step-item
+    position relative
+    float left
+    width 50%
+    padding-top 30px
+    @media SM
+      width 25%
+      padding-top 45px
+    &.step-item-prizes
+      width 49%
+      float none
+      display inline-block
+      vertical-align top
+      @media screen and (min-width: 640px)
+        width 32%
+      &:after
+        display none !important
+
+    &:last-child
+      &:after
+        display none
+    &:after
+      content ''
+      position absolute
+      right -40px
+      top 30px
+      width 81px
+      height 26px
+      background url("../images/step-arrow-right.png") no-repeat 0 0
+      display none
+      @media SM
+        display block
+      @media MD
+        top 80px
+      @media LG
+        top 100px
+    .image
+      overflow hidden
+      width 125px
+      height 125px
+      margin-left auto
+      margin-right auto
+      border 5px solid #91ad05
+      border-radius 50%
+      background #f2f2f2
+      @media LG
+        width 155px
+        height 155px
+      img
+        display block
+        width 100%
+        height 100%
+    .step-desc
+      ubuntu()
+      font-size 12px
+      line-height 1.2
+      padding 10px
+      @media SM
+        font-size 14px
+        padding-top 15px
+        max-width 300px
+        margin-left auto
+        margin-right auto
+      @media LG
+        font-size 18px
+        padding-top 30px
+      a
+        color #91ad05
+        &:hover
+          text-decoration underline
+

@@ -1,0 +1,126 @@
+.m_search
+  position relative
+  .search-form
+    margin-bottom 30px
+    position relative
+    height 50px
+    max-width 520px
+    margin-left auto
+    margin-right auto
+    input,
+    button
+      display block
+      height 100%
+    input
+      anim(background-color, color, border-color)
+      bebas()
+      border none
+      background #f1f1f1
+      color #c1c1c1
+      padding 15px 60px 15px 15px
+      width 100%
+      font-size 22px
+      border 1px solid @background
+      &:hover
+        color #949494
+        background-color #d9d9d9
+        border-color @background-color
+      &:focus
+        border-color #f1f1f1
+        background #fff
+        color #000
+    button
+      background $green
+      width 50px
+      height 50px
+      position absolute
+      right 0
+      top 0
+      border none
+      &:hover
+        background-color #88a203
+      &:active
+        background-color #7e9604
+      &:before
+        content ''
+        position absolute
+        left 50%
+        top 50%
+        background: url('../images/sprite.png') no-repeat 0 0;
+        width: 22px;
+        height: 23px;
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+        retina()
+  .search-result
+    max-width 970px
+    margin-left auto
+    margin-right auto
+    .item
+      position relative
+      background #f1f1f1
+      padding 15px
+      @media SM
+        padding 25px
+        min-height 220px
+      & + .item
+        margin-top 15px
+        @media SM
+          margin-bottom 25px
+      .details
+        text-align center
+        @media SM
+          padding-left 205px
+          text-align left
+        .title
+          a
+            anim()
+            color #000
+            font-size 27px
+            &:hover
+              color $green
+        .categories
+          margin-bottom 15px
+          ul
+            li
+              display inline-block
+              vertical-align middle
+              font-size 15px
+              line-height 1
+              & + li
+                &:before
+                  content '/'
+                  padding-left 5px
+                  padding-right 5px
+              a
+                ubuntu()
+                anim()
+                color #000
+                text-decoration underline
+                &:hover
+                  color $green
+        .desc
+          ubuntu()
+          font-size 15px
+          line-height 24px
+      .image
+        height 120px
+        line-height 120px
+        text-align center
+        margin-bottom 15px
+        @media SM
+          position absolute
+          left 0
+          top 0
+          width 220px
+          height 220px
+          line-height 220px
+        a
+          display block
+          width 100%
+          height 100%
+          img
+            max-width 100%
+            max-height 100%
+            display inline-block
+            vertical-align middle

@@ -1,0 +1,258 @@
+// Selection
+selection()
+  background #91ad05
+  color #fff
+::-moz-selection
+  selection()
+::selection
+  selection()
+
+// Placeholder
+placeholder()
+  color #999
+placeholderFocus()
+  visibility hidden
+::-webkit-input-placeholder,textarea::-webkit-input-placeholder
+  placeholder()
+::-moz-placeholder,textarea::-moz-placeholder
+  placeholder()
+:-ms-input-placeholder,textarea:-ms-input-placeholder
+  placeholder()
+input:-moz-placeholder,textareainput:-moz-placeholder
+  placeholder()
+input:focus::-webkit-input-placeholder,textarea:focus::-webkit-input-placeholder
+  placeholderFocus()
+input:focus:-moz-placeholder,textarea:focus:-moz-placeholder
+  placeholderFocus()
+input:focus::-moz-placeholder,textarea:focus::-moz-placeholder
+  placeholderFocus()
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder
+  placeholderFocus()
+body
+  bebas()
+  font-size 16px
+  line-height 1.4
+h1, h2, h3, h4, h5, h6
+  line-height 1.2
+  font-weight bold
+h1
+  font-size 36px
+h2
+  font-size 30px
+h3
+  font-size 24px
+h4
+  font-size 18px
+h5
+  font-size 14px
+h6
+  font-size 12px
+a[href^="tel"]
+  cursor default
+p
+  margin-top 0
+  margin-bottom 20px
+article
+  position relative
+  ubuntu()
+  a
+    color #7e9604
+    &:hover
+      text-decoration underline
+  p:last-child
+    margin-bottom 0
+  img
+    max-width 100%
+    width auto
+  h1, h2, h3, h4, h5
+    bebas()
+    margin 0
+    line-height 1
+    padding-top 15px
+    padding-bottom 15px
+    &.center
+      display block
+      text-align center
+  h1
+    font-size 40px
+    @media SM
+      font-size 58px
+  h2
+    font-size 36px
+    @media SM
+      font-size 50px
+  h3
+    font-size 27px
+    @media SM
+      font-size 40px
+  h4
+    font-size 21px
+    @media SM
+      font-size 36px
+  h5
+    font-size 15px
+    @media SM
+      font-size 27px
+  blockquote
+    border-left 3px solid #424242
+    padding-left 20px
+  > ul
+    padding-bottom 20px
+    li
+      position relative
+      padding-left 15px
+      font-size 15px
+      line-height 24px
+      &:before
+        content '•'
+        color $orange
+        font-weight bold
+        position absolute
+        left 0
+        top 0
+        font-size 24px
+      & + li
+        margin-top 5px
+  ol
+    li
+      position relative
+      padding-left 30px
+      counter-increment step-counter
+      margin-bottom 15px
+      &:before
+        content counter(step-counter)
+        margin-right 10px
+        margin-bottom 4px
+        font-size 80%
+        background-color #424242
+        color #fff
+        font-weight bold
+        padding 3px 8px
+        border-radius $radius
+        position absolute
+        left 0
+        top 0
+
+.section-title
+  position relative
+  z-index 1
+  text-align center
+  margin-bottom 30px
+  @media SM
+    text-align left
+  &.center
+    display block
+    text-align center
+  h2
+    line-height 1
+    font-size 42px
+    @media XS
+      font-size 50px
+  p
+    display block
+    ubuntu()
+    font-size 15px
+    line-height 24px
+    margin-bottom 0
+    margin-top 15px
+    max-width 800px
+    margin-left auto
+    margin-right auto
+    a
+      color #91ad05
+      &:hover
+        text-decoration underline
+
+.page-headling
+  position relative
+  text-align center
+  color #fff
+  margin 0 -15px
+  height 240px
+  @media XS
+    height 320px
+  @media SM
+    margin 0 -25px
+  @media LG
+    margin 0
+  &.large
+    height 320px
+    @media XS
+      height 400px
+    @media SM
+      height 450px
+    @media MD
+      height 520px
+  .image
+    position absolute
+    left 0
+    top 0
+    width 100%
+    height 100%
+    background-position 50%
+    background-repeat no-repeat
+    background-size cover
+    z-index -1
+    &:after
+      content ''
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
+      background #000
+      opacity .4
+  .text
+    display table
+    width 100%
+    height 100%
+    .helper
+      display table-cell
+      vertical-align middle
+    &.product-balloon
+      position relative
+      @media SM
+        padding-right 200px
+        padding-left 200px
+      @media MD
+        padding-right 300px
+        padding-left 300px
+      @media LG
+        padding-right 380px
+        padding-left 380px
+      .balloon
+        display none
+        @media SM
+          width 180px
+          height 180px
+          position absolute
+          right 25px
+          top 50%
+          margin-top -90px
+          display block
+          background #fff
+          border-radius 50%
+          line-height 180px
+          text-align center
+        @media MD
+          height 260px
+          width 260px
+          line-height 260px
+          margin-top -130px
+        @media LG
+          right 110px
+        img
+          display inline-block
+          vertical-align middle
+          max-width 70%
+          max-height 70%
+    h2
+      font-size 42px
+      line-height 1
+      text-shadow 1px 1px 1px rgba(0,0,0,.5)
+      @media XS
+        font-size 58px
+    p
+      ubuntu()
+      font-size 15px
+

@@ -1,0 +1,116 @@
+.btn
+  anim()
+  background $green
+  color #fff
+  font-size 24px
+  line-height 1
+  display inline-block
+  vertical-align middle
+  padding 13px 25px
+  border-radius 30px
+  &:hover
+    background #88a203
+  &:active
+    background #7e9604
+.like-counter
+  button
+    bebas()
+    anim()
+    position relative
+    background none
+    border none
+    display block
+    line-height 18px
+    padding-left 22px
+    padding-top 2px
+    &:before
+      content ''
+      anim()
+      position absolute
+      left 0
+      top 50%
+      background: url('../images/sprite.png') no-repeat -200px -50px;
+      width: 20px;
+      height: 18px;
+      margin-top -(@height/2)
+      opacity 0
+      retina()
+    &:after
+      content ''
+      anim()
+      position absolute
+      left 0
+      top 50%
+      background: url('../images/sprite.png') no-repeat -200px 0;
+      width: 20px;
+      height: 18px;
+      margin-top -(@height/2)
+      retina()
+    &:hover
+      color $orange
+      &:after
+        opacity 0
+      &:before
+        opacity 1
+
+.social-buttons
+  a
+    anim(background-color)
+    position relative
+    display inline-block
+    vertical-align middle
+    width 40px
+    height 40px
+    border-radius 50%
+    background $green
+    margin-right 10px
+    &:hover
+      background-color $orange
+    &.fb
+      &:after
+        content ''
+        position absolute
+        left 50%
+        top 50%
+        background: url('../images/sprite.png') no-repeat -250px -100px;
+        width: 10px;
+        height: 18px;
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+        retina()
+    &.vk
+      &:after
+        content ''
+        position absolute
+        left 50%
+        top 50%
+        background: url('../images/sprite.png') no-repeat 0 -100px;
+        width: 20px;
+        height: 11px;
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+        retina()
+    &.in
+      &:after
+        content ''
+        position absolute
+        left 50%
+        top 50%
+        background: url('../images/sprite.png') no-repeat -50px -100px;
+        width: 18px;
+        height: 18px;
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+        retina()
+    &.ok
+      &:after
+        content ''
+        position absolute
+        left 50%
+        top 50%
+        background: url('../images/sprite.png') no-repeat -100px -100px;
+        width: 11px;
+        height: 20px;
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+        retina()

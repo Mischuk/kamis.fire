@@ -1,0 +1,146 @@
+extends _layout
+
+block settings
+  - var title = 'Победители недели';
+  - var header_fixed = false;
+
+block content
+  .content
+    .m_users
+      .wrapper
+        .section-title.center
+          h2 Выбери лучших шашлыкоманов
+          p А вот и наши герои! Те, кто достойно выдержал испытание дикой природой и еще более диким мясом, справился с аппетитом, чтобы снять самые горячие фото с настоящим вкусом огня! Попробуй <a href="#">#вкусогня</a> и ты! Стань лучшим на следующей неделе!
+    -
+      var top_users_total = [
+        {
+          image: 'images/content/instagram-1.png',
+          type: 'top',
+          login: 'martines_ru',
+          title: 'То самое чувство, когда ты на шашлыках с любимой женой',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-2.png',
+          type: 'new',
+          login: 'Михаил Суворов',
+          title: '',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-3.png',
+          type: 'top',
+          login: 'semya_martynovyh',
+          title: 'Разводим огонь вместе с дедушкой. Мои мужчины!',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-4.png',
+          type: 'new',
+          login: 'Любочка Задонская',
+          title: 'Ну и как тут без шашлычного селфи ))',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-1.png',
+          type: 'top',
+          login: 'martines_ru',
+          title: 'То самое чувство, когда ты на шашлыках с любимой женой',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-2.png',
+          type: 'new',
+          login: 'Михаил Суворов',
+          title: '',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-3.png',
+          type: 'top',
+          login: 'semya_martynovyh',
+          title: 'Разводим огонь вместе с дедушкой. Мои мужчины!',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-4.png',
+          type: 'new',
+          login: 'Любочка Задонская',
+          title: 'Ну и как тут без шашлычного селфи ))',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-1.png',
+          type: 'top',
+          login: 'martines_ru',
+          title: 'То самое чувство, когда ты на шашлыках с любимой женой',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-2.png',
+          type: 'new',
+          login: 'Михаил Суворов',
+          title: '',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-3.png',
+          type: 'top',
+          login: 'semya_martynovyh',
+          title: 'Разводим огонь вместе с дедушкой. Мои мужчины!',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-4.png',
+          type: 'new',
+          login: 'Любочка Задонская',
+          title: 'Ну и как тут без шашлычного селфи ))',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-1.png',
+          type: 'top',
+          login: 'martines_ru',
+          title: 'То самое чувство, когда ты на шашлыках с любимой женой',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-2.png',
+          type: 'new',
+          login: 'Михаил Суворов',
+          title: '',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-3.png',
+          type: 'top',
+          login: 'semya_martynovyh',
+          title: 'Разводим огонь вместе с дедушкой. Мои мужчины!',
+          like_counter: '210'
+        },
+        {
+          image: 'images/content/instagram-4.png',
+          type: 'new',
+          login: 'Любочка Задонская',
+          title: 'Ну и как тут без шашлычного селфи ))',
+          like_counter: '210'
+        }
+      ]
+    .m_users
+      .wrapper
+        .users-nav
+          .selected-users-collapse
+          ul
+            li: a(class="current" data-user-type="new" href="#") Самые новые
+            li: a(data-user-type="top" href="#") Самые популярные
+        .users-list.columns
+          each item in top_users_total
+            .item(data-item-type=item.type)
+              .image(style="background-image: url("+item.image+")"): a(href="#")
+              .bottom
+                .username: a(href="#") #{item.login}
+                .title #{item.title}&nbsp;<a href="#">#hash</a>
+                .like-counter
+                  button #{item.like_counter}
+        .details
+          a(class="btn" href="#") Смотреть еще

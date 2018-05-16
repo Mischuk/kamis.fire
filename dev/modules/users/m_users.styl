@@ -1,0 +1,234 @@
+.m_users
+  padding-top 20px
+  @media SM
+    padding-top 40px
+  .details
+    position relative
+    z-index 1
+    text-align center
+    margin-top 10px
+  .columns
+    clearfix()
+    margin-top 30px
+    @media screen and (min-width: 420px)
+      margin-left -15px
+      margin-right -15px
+  .item
+    overflow hidden
+    margin-bottom 30px
+    @media screen and (min-width: 420px)
+      float left
+      width 50%
+      padding-left 15px
+      padding-right 15px
+      background none
+    @media screen and (min-width: 420px) and (max-width: 767px)
+      &:nth-child(2n+1)
+        clear left
+    @media SM
+      width 25%
+      padding-left 5px
+      padding-right 5px
+      &:nth-child(4n+1)
+        clear left
+    @media MD
+      padding-left 15px
+      padding-right 15px
+    &:last-child
+      margin-bottom 0
+
+    .postdate
+      text-align center
+      font-size 18px
+      line-height 1
+      padding-bottom 10px
+      @media SM
+        font-size 24px
+        padding-bottom 20px
+    .image
+      height 205px
+      background-repeat no-repeat
+      background-position top center
+      background-size cover
+      @media SM
+        height 150px
+      @media MD
+        height 225px
+      &:hover
+        a
+          background rgba(253, 158, 40, 0.2)
+      a
+        anim()
+        display block
+        width 100%
+        height 100%
+        background rgba(253, 158, 40, 0)
+
+    .bottom
+      padding 10px
+      line-height 1
+      position relative
+      > div
+        margin-bottom 10px
+        &:last-child
+          margin-bottom 0
+      .username
+        a
+          ubuntu()
+          font-size 15px
+          line-height 18px
+          display inline-block
+          vertical-align middle
+          font-weight 500
+          color #000
+          position relative
+          padding-left 22px
+          @media SM
+            font-size 13px
+          @media MD
+            font-size 15px
+          &:after
+            content ''
+            background: url('../images/sprite.png') no-repeat -200px -150px;
+            width: 18px;
+            height: 18px;
+            position absolute
+            left 0
+            top 50%
+            margin-top -9px
+            retina()
+          &:hover
+            color #91ad05
+            &:after
+              background-position -250px -150px
+      .tags
+        a
+          anim()
+          ubuntu()
+          color #91ad05
+          display inline-block
+          vertical-align middle
+          &:hover
+            text-decoration underline
+      .title
+        ubuntu()
+        font-size 15px
+        line-height 18px
+        a
+          anim()
+          color #91ad05
+          display inline-block
+          vertical-align middle
+          &:hover
+            text-decoration underline
+      .like-counter
+        ubuntu()
+        font-size 15px
+        line-height 18px
+        font-weight 500
+
+.m_users
+  .users-nav,
+  .users-list
+    @media screen and (min-width: 380px)
+      padding-left 4%
+      padding-right 4%
+    @media SM
+      padding-left 0
+      padding-right 0
+  .users-nav
+    position relative
+    margin-bottom 15px
+    ul
+      background #e6e6e6
+      border-radius 0 0 30px 30px
+      overflow hidden
+      position absolute
+      left 0
+      top 100%
+      width 100%
+      display none
+      @media screen and (min-width: 380px)
+        width 92%
+        left 4%
+      @media SM
+        clearfix()
+        position static
+        width 100%
+        left 0
+        display block
+        border-radius 0
+        background none
+        text-align center
+      li
+        @media SM
+          display inline-block
+          vertical-align middle
+          margin-right 15px
+        a
+          anim()
+          display block
+          color #000
+          font-size 27px
+          line-height 1
+          padding 8px 30px
+          @media SM
+            background #e6e6e6
+            border-radius 30px
+          &:hover
+            @media SM
+              background #e6e6e6 - 15%
+          &.current
+            background #e6e6e6 - 15%
+            @media SM
+              background $orange
+              color #fff
+
+    .selected-users-collapse
+      position relative
+      background #e6e6e6
+      font-size 27px
+      padding 8px 30px
+      line-height 1
+      border-radius 30px
+      @media SM
+        display none !important
+      &.is-open
+        border-radius 30px 30px 0 0
+        &:after
+          transform rotate(180deg)
+        & + ul
+          display block
+      &:after
+        content ''
+        position absolute
+        right 25px
+        top 50%
+        background: url('../images/sprite.png') no-repeat -150px -100px;
+        width: 16px;
+        height: 10px;
+        margin-top -(@height/2)
+        retina()
+  .users-list
+    clearfix()
+    font-size 0
+    @media SM
+      padding-top 15px
+      margin-left -15px
+      margin-right -15px
+    .item
+      display none
+      float none
+      vertical-align top
+      @media screen and (min-width: 420px)
+        width 50%
+      @media screen and (min-width: 420px) and (max-width: 767px)
+        &:nth-child(2n+1)
+          clear none
+      @media SM
+        width 25%
+        &:nth-child(4n+1)
+          clear none
+      &.current
+        display inline-block
+

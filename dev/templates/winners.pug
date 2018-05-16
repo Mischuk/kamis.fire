@@ -1,0 +1,57 @@
+extends _layout
+
+block settings
+  - var title = 'Победители недели';
+  - var header_fixed = false;
+
+block content
+  .content
+    .m_users
+      .wrapper
+        .section-title.center
+          h2 победители недели
+          p А вот и наши герои! Те, кто достойно выдержал испытание дикой природой и еще более диким мясом, справился с аппетитом, чтобы снять самые горячие фото с настоящим вкусом огня! Попробуй <a href="#">#вкусогня</a> и ты! Стань лучшим на следующей неделе!
+        -
+          var top_users_week = [
+            {
+              image: 'images/content/instagram-1.png',
+              postdate: '30 апреля - 6 мая',
+              login: 'martines_ru',
+              title: 'То самое чувство, когда ты на шашлыках с любимой женой',
+              like_counter: '210'
+            },
+            {
+              image: 'images/content/instagram-2.png',
+              postdate: '7 - 13 мая',
+              login: 'Михаил Суворов',
+              title: '',
+              like_counter: '210'
+            },
+            {
+              image: 'images/content/instagram-3.png',
+              postdate: '14 - 20 мая',
+              login: 'semya_martynovyh',
+              title: 'Разводим огонь вместе с дедушкой. Мои мужчины!',
+              like_counter: '210'
+            },
+            {
+              image: 'images/content/instagram-4.png',
+              postdate: '21 - 27 мая',
+              login: 'Любочка Задонская',
+              title: 'Ну и как тут без шашлычного селфи ))',
+              like_counter: '210'
+            }
+          ]
+        .columns
+          each item in top_users_week
+            .item
+              .postdate #{item.postdate}
+              .image(style="background-image: url("+item.image+")"): a(href="#")
+              .bottom
+                .username: a(href="#") #{item.login}
+                .title #{item.title}&nbsp;<a href="#">#hash</a>
+                .tags <a href="#">#камисогонь</a>
+                .like-counter
+                  button #{item.like_counter}
+        .details
+          a(class="btn" href="#") Смотреть еще

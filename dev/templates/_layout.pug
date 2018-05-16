@@ -1,0 +1,24 @@
+doctype html
+block settings
+html(lang="ru").no-js
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="msapplication-tap-highlight" content="no")
+    link(href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&amp;subset=cyrillic" rel="stylesheet")
+    link(rel="stylesheet" href="css/vendor.css")
+    link(rel="stylesheet" href="css/app.css")
+    script(async src="js/modernizr.js")
+  body
+    include _content
+    include _mixins
+    include ../modules/header/m_header
+    block content
+    include ../modules/rss-form/m_rss-form
+    include ../components/pagelist/pagelist
+    // Javascript
+    script(src="js/jquery-3.2.1.min.js")
+    script(src="js/vendor.js")
+    script(src="js/app.js")

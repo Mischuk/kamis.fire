@@ -1,0 +1,49 @@
+.paginations
+  margin-top 30px
+  text-align center
+  li
+    display inline-block
+    vertical-align middle
+    margin 5px
+    a
+      anim()
+      position relative
+      display block
+      width 45px
+      height 45px
+      line-height 45px
+      border-radius 50%
+      color #000
+      background #f1f1f1
+      font-size 27px
+      &:hover
+        background-color #dbdbdb
+      &.next
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -150px -100px;
+          width: 16px;
+          height: 10px;
+          position absolute
+          left 50%
+          top 50%
+          margin-left -(@width/2)
+          margin-top -(@height/2)
+          transform rotate(-90deg)
+          retina()
+      &.prev
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -150px -100px;
+          width: 16px;
+          height: 10px;
+          position absolute
+          left 50%
+          top 50%
+          margin-left -(@width/2)
+          margin-top -(@height/2)
+          transform rotate(90deg)
+          retina()
+      &.current
+        background $orange
+        color #fff

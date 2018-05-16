@@ -1,0 +1,140 @@
+.m_lead-carousel
+  margin 0 -15px
+  @media SM
+    margin 0 -25px
+  @media LG
+    margin 0
+  .slick-arrow
+    anim(background-color)
+    position absolute
+    top 70px
+    width 50px
+    height 120px
+    border none
+    background #f1f1f1
+    text-indent -9999px
+    z-index 1
+    @media SM
+      top 50%
+      margin-top -60px
+      display none
+    @media MD
+      display block
+    &:hover
+      background #fd9e28
+    &.slick-next
+      right 0
+      &:after,
+      &:before
+        anim()
+        content ''
+        position absolute
+        left 50%
+        top 50%
+        background-image url('../images/sprite.png')
+        background-repeat no-repeat
+        width: 19px;
+        height: 31px;
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+        retina()
+      &:after
+        background-position -150px -50px
+      &:before
+        background-position -150px 0
+        opacity 0
+      &:hover
+        &:after
+          opacity 0
+        &:before
+          opacity 1
+    &.slick-prev
+      left 0
+      &:after,
+      &:before
+        anim()
+        content ''
+        position absolute
+        left 50%
+        top 50%
+        background-image url('../images/sprite.png')
+        background-repeat no-repeat
+        width: 19px;
+        height: 31px;
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+        retina()
+      &:after
+        background-position -100px -50px
+      &:before
+        background-position -100px 0
+        opacity 0
+      &:hover
+        &:after
+          opacity 0
+        &:before
+          opacity 1
+  .slide
+    height 475px
+    position relative
+    @media SM
+      height 420px
+    @media MD
+      height 630px
+    .image
+      height 260px
+      background-repeat no-repeat
+      background-position 50%
+      background-size cover
+      @media SM
+        position absolute
+        left 0
+        top 0
+        width 100%
+        height 100%
+    .text
+      display table
+      height 215px
+      width 100%
+      text-align center
+      padding-left 15px
+      padding-right 15px
+      background #f2f2f2
+      @media SM
+        display block
+        height auto
+        position absolute
+        right 0
+        bottom 0
+        width 500px
+        padding 30px
+        background rgba(255,255,255,.9)
+        text-align left
+      .helper
+        display table-cell
+        vertical-align middle
+        @media SM
+          display block
+      h2
+        font-size 46px
+        line-height 1
+        @media XS
+          font-size 58px
+      p
+        ubuntu()
+        font-size 15px
+        line-height 1
+      a
+        anim()
+        background $green
+        color #fff
+        font-size 24px
+        line-height 1
+        display inline-block
+        vertical-align middle
+        padding 13px 45px
+        border-radius 30px
+        &:hover
+          background #88a203
+        &:active
+          background #7e9604
