@@ -1,4 +1,4 @@
-# [Kamis](http://frontend.watch/kamis)
+# [Kamis.fire](http://frontend.watch/kamis.fire)
 * Based on [Gulp](http://gulpjs.com/)
 * [Pug](https://pugjs.org) templates + cached changes/posthtml
 * [Stylus](http://stylus-lang.com/) + sourcemaps/rupture/jeet/postcss
